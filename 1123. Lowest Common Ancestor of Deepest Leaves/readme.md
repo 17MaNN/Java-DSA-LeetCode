@@ -1,46 +1,45 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
-class Solution {
-    class Pair {
-        int depth;
-        TreeNode node;
+🧠 Lowest Common Ancestor of Deepest Leaves
+📌 Problem Overview
 
-        Pair(int depth, TreeNode node) {
-            this.depth = depth;
-            this.node = node;
-        }
-    }
-    public TreeNode subtreeWithAllDeepest(TreeNode root) {
-        return dfs(root).node;
-    }
-    private Pair dfs(TreeNode root) {
-        if (root == null) {
-            return new Pair(0, null);
-        }
+Given the root of a binary tree, each node has a depth, defined as the shortest distance from the root.
 
-        Pair left = dfs(root.left);
-        Pair right = dfs(root.right);
+Your task is to find the smallest subtree that contains all the deepest nodes in the tree.
 
-        if (left.depth > right.depth) {
-            return new Pair(left.depth + 1, left.node);
-        } else if (right.depth > left.depth) {
-            return new Pair(right.depth + 1, right.node);
-        } else {
-            // Both sides have deepest nodes
-            return new Pair(left.depth + 1, root);
-        }
-    }
-}
+This problem is commonly known as:
+
+Lowest Common Ancestor of Deepest Leaves
+
+Smallest Subtree with All Deepest Nodes
+
+✅ Key Insight
+
+👉 The required subtree root is the Lowest Common Ancestor (LCA) of all deepest leaves.
+
+Instead of:
+
+Finding deepest nodes first
+
+Then computing LCA separately
+
+We solve everything in one DFS traversal.
+
+🧠 Approach (Post-order DFS)
+
+We traverse the tree bottom-up and for each node compute:
+
+depth: Maximum depth of its subtree
+
+node: LCA of the deepest leaves in that subtree
+
+🔍 Decision Logic
+
+
+
+
+
+
+
+
+🗣️ Interview Explanation (Quick)
+
+"Using post-order DFS, I track subtree depth and LCA. If left and right depths match, current node becomes the LCA of deepest leaves."
