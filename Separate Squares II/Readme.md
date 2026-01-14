@@ -128,4 +128,3 @@ If you plan to extend this:
 * Adapt for rectangles instead of squares
 * Convert to C++ / Python
 
-Happy coding! 🚀
