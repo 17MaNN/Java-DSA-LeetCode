@@ -9,7 +9,7 @@ A **binary tree** is called **balanced** if:
 2. Each node asks:
    - “What is the height of my left child?”
    - “What is the height of my right child?”
-3. If the difference is **more than 1**, we say ❌ **not balanced**.
+3. If the difference is **more than 1**, we say **not balanced**.
 4. We return `-1` as a **signal** that the tree is broken.
 5. If everything is fine, we return the height.
 
