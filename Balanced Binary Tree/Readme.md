@@ -3,7 +3,7 @@
 A **binary tree** is called **balanced** if:
 - For **every node**, the height of the **left** and **right** subtree differs by **at most 1**.
 
-## How the code works (baby steps 👶)
+## How the code works
 
 1. We go **down to the leaves first** (bottom of the tree).
 2. Each node asks:
