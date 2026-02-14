@@ -22,6 +22,3 @@ Maintain:
 
 Store the first occurrence of (diff1, diff2).  
 If the same pair appears again, the substring between them has equal a, b, c.
-
-Time Complexity: O(n)  
-Space Comp
